@@ -1,0 +1,164 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/Yellow and Pink Retro Streetwear Logo (1).png" />
+     <title>HellWeek</title>
+    <meta name="description" content="Emergency Airport Locator Project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Abhinav Vinod</span>
+      </a>
+      <!-- Button Container -->
+      <div class="button-container">
+        <!-- Home Button -->
+        <a class="button" href="../index.html">
+          <span class="button-text">Home</span>
+        </a>
+        <!-- Contact Me Button -->
+        <a class="button" href="mailto:avinod34@gatech.edu" target="_blank">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Emergency Airport Locator</div>
+        <div class="body-text">We wanted to study how we could use certain machine learning models to predict where the optimal landing point would be for an aircraft facing an emergency circumstance. This is how we explored it:</div>
+        <image class="project-header-image" src="../assets/images/KMeans_clustering.png">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Background</div>
+        <div class="project-details-content">
+          <div class="body-text">Our project, Emergency Landing Airport Locator is going to address the issue of finding the nearest, valid airport to land at for airplanes (commercial or not) in distress to take into consideration when deciding where to emergency land. Currently, pilots use a Flight Management System (FMS) to plan their route and which airport they will land at before they take off. Then, when they approach the airport, Air Traffic Control (ATC) will direct them to the exact runway they need to land on [6]. The problem arises when, during an emergency, a pilot needs to manually reconfigure their FMS whilst under extreme stress. The goal of our project is to build a model to assist them with this part of the process.</div>
+        
+          <div class="body-text">We have identified two datasets that we have used in conjunction to build this model. The first is a list of airports, their IDs, and their locations. The second is runways by airport ID, their length, the types of aircraft that can land there, and more. By matching these two sets by Airport ID, we can build a list of runway locations to feed into our model.</div>
+
+          <div class="body-text">Overall, this exploration into the viability of using machine learning to help decide landing locations proved extremely insightful and highlighted a multitude of benefits and drawbacks that the use of ML in the decision-making process can bring. In particular, while our original models were able to predict a viable location for landing, there were many instances where the model would suggest something entirely infeasible, potentially confusing pilots should they use it. Much of this inaccuracy came from our original, incorrect application of KNNs as well as some issues in the testing set since some test planes had no viable airports at all given they were in the middle of the ocean. Furthermore, while the exploration into separating the collection of airports into regions of viability for a plane using K-Means did reduce the numerical input under certain clustering numbers, the accuracy of the model’s predictions thereafter only suffered. Additionally, though perhaps able to be engineered in the future, SVMs also proved a dead-end for us as they introduced a significant amount of computational complexity to our system and, to our knowledge, were unable to be trained properly on our dataset.</div>
+
+          <div class="body-text">Read more here: <a href="https://github.gatech.edu/pages/tdeshmukh8/CS4641-Group-104/" target="_blank">https://github.gatech.edu/pages/tdeshmukh8/CS4641-Group-104/</a></div>
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content">
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/3b52ee04-8ce2-419f-ab01-b55ba8f75b56.png" class="gallery-image">
+              <span class="image-caption">Potential Airports.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/fe0cb5c3-2699-4f20-b0c7-e8e3b18fa8c5.png" class="gallery-image">
+              <span class="image-caption">Randomly generated planes.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/graphs.png" class="gallery-image">
+              <span class="image-caption">Main takeaways.</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.instagram.com/abhi.v19/">
+        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:avinod34@gatech.edu">
+        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
